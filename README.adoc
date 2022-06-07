@@ -1,0 +1,177 @@
+= SAÉ 2.02
+:icons: font
+:numbered:
+:toc: left
+:toc-title: Sommaire
+:toclevels: 1
+// Antora 
+// => traduction automatique fr/uk
+// => niveau de guidage
+//include:definitions.txt (glossaire des termes du BUT comme SAE)
+
+// Specific to GitHub
+ifdef::env-github[]
+:toc:
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+:graduation-icon: :mortar_board:
+:cogs-icon: :writing_hand:
+:beginner: :arrow_right:
+:advanced: :arrow_upper_right:
+:expert: :arrow_up:
+:dollar: :dollar:
+:git: link:{giturl}[git]
+:us-icon: :us:
+:fr-icon: :fr:
+endif::[]
+
+// Local variables
+
+:codacy: https://www.codacy.com[Codacy]
+:joular: https://www.noureddine.org/research/joular[Joular]
+
+== Auteur(s)
+
+- Jean-Michel Bruel (Université de Toulouse), mailto:bruel@irit.fr[bruel@irit.fr]
+- Version: 2022.05 (BUT1 2022)
+//- Kata length: 12 hours
+- Durée :  15 heures (9 créneaux TP + 1 cours)
+
+// == Objectives
+== Objectifs
+
+L'objectif de cette SAÉ (**S**ituation d'**A**pprentissage et d'**É**valuation) est d'approfondir la réflexion sur l'approche algorithmique des problèmes rencontrés pendant les phases de développement. (cf. link:docs/sae2.02.pdf[]).
+Plus précisément :
+
+  - Participer à un concours de codage
+  - Lire, comprendre et évaluer un code qui n'est pas le sien
+  - Comparer des algorithmes sur un critère précis
+  - Justifier de manière objective ses comparaisons et son classement
+
+// == Documents fournis
+
+//   - IEEE 2021 International Requirements Engineering Conference
+//   - [Proposal](./docs/tutorial_proposal.pdf)
+//   - [Tutorial Handout](./docs/handout.pdf)
+
+//== Prerequisites
+// == Prérequis
+
+== Description
+
+Cette SAÉ se déroule en 2 phases d'une semaine chacune.
+
+=== Phase 1 : concours d'algorithme
+
+Vous allez devoir soumettre un algorithme qui résout un problème simple mais qui peut se régler avec plusieurs solutions différentes. 
+Vous avez une semaine (3 séances de TP non encadrées) pour réaliser et soumettre votre (ou vos) solutions.
+
+Le problème est le suivant :
+
+On souhaite simplement enlever tous les espaces (les "blancs", code ascii 32) individuels (par exemple `Cou⎵cou` deviendra `Coucou`) et non les espaces consécutifs (par exemple `Cou⎵cou⎵⎵J⎵M⎵⎵B` deviendra `Coucou⎵⎵JM⎵⎵B`) d'un texte d'une longueur quelconque fourni en paramètre (sous la forme d'un `String` java ou d'un `char*` en C par exemple).
+
+Les contraintes sont les suivantes :
+
+- votre algorithme doit être écrit dans l'un des langages suivants au choix : java, C ou Python
+- il doit permettre à l'un des 3 programmes principaux fournis (java, C ou Python) de fonctionner (respect donc des noms de classes, méthodes ou fonctions en conséquence)
+
+Vu qu'il existe de nombreuses façons de résoudre ce problème, vous devrez indiquer la principale qualité de votre algorithme en précisant dans quelle catégorie vous concourrez :
+
+Simplicité::
+  Ici il s'agit de faire un code facile à maintenir, lisible par des humains.
+Efficacité::
+  Peu importe le code source, c'est l'efficacité de son exécution qui est recherché (complexité maîtrisée, temps d'exécution minimal, ...).
+Sobriété numérique::
+  L'algorithme consomme le moins de ressources possible (mémoire, calcul, ...).
+
+NOTE: Vous pouvez soumettre plusieurs algorithmes dans plusieurs catégories pour maximiser vos chances de gagner le concours.
+
+=== Phase 2 : comparaison et évaluation des solutions
+
+Dans cette deuxième phase, elle aussi d'une semaine (mais 6 séances de TP), vous devrez comparer des solutions entre elles, et les classer en justifiant vos analyses.
+
+Vous vous verrez affecter, pour *chaque* catégorie d'algorithmes (Simplicité, Efficacité, Sobriété) un certain nombre de solutions au hasard parmi celles soumises en phase 1.
+
+Il vous faudra évaluer chaque algorithme selon des critères et les classer ensuite.
+
+NOTE: On vous impose au minimum les critères ci-dessous mais vous pourrez en rajouter.
+À vous de les utiliser judicieusement pour les catégories les plus appropriées.
+
+=== Critères de comparaison
+
+Lisibilité du code::
+  Ce critère est subjectif. Il se base sur la facilité à comprendre ce que fait le code.
+Qualité du code::
+  Vous utiliserez des outils open source de mesure de qualité de code (e.g., {codacy}).
+Efficacité::
+  Il s'agit d'évaluer la complexité algorithmique de la solution (O(n2) ou O(nlog(n))). Si on double par exemple la taille de la donnée en entrée, est-ce qu'on double le temps de calcul ?
+Sobriété numérique::
+  Cela devient un critère de plus en plus important. Certains outils permettent de donner une mesure de la consommation en ressources d'un algorithme (e.g., {joular}).
+Temps d'exécution::
+  Il s'agit de mesurer le temps d'exécution.
++
+WARNING: Il conviendra de prendre des mesures sur des données plus ou moins grandes, certains algorithmes étant plus rapides que d'autres en fonction de la taille des données en entrée.
+
+// == Deliverables
+== Livrables
+
+Vous utiliserez le dépôt initial qui vous aura été attribué via classroom pour pousser vos codes et vos livrables :
+
+=== Phase 1 (deadline : **vendredi 9 juin** à minuit)
+
+* [ ] Votre ou vos algorithmes en précisant les éléments du tableau ci-dessous :
+
+[options="header"]
+|==========================================================================
+| #    | lien                                        | langage  | catégorie
+| 1    | link:src/main/java/eraser/Eraser.java[ici]  | Java     | Simplicité
+| ...  | ...                                         | ...      | ...      
+|==========================================================================
+
+=== Phase 2 (deadline : **vendredi 16 juin** à minuit)
+
+* [ ] Le rapport d'évaluation des algorithmes (e.g., jupyter, asciidoc ou PDF). Pour chaque catégorie, vous devrez désigner qui est 1er, 2ème, 3ème, ... (avec possibilité d’ex-aequo si le hasard vous a attribué des algos similaires). Il doit se trouver dans le répertoire `rapport` de votre dépôt.
+* [ ] Les codes de test, d'évaluation ou de mesure. Ils doivent se trouver dans le répertoire `analyse` de votre dépôt.
+* [ ] Les références des librairies/outils utilisés (pour ceux non fournis). Elles doivent être listées dans la sous-section (Références) ci-dessous.
+* [ ] La chaîne de compilation et exécutable, ou paquetage selon les standards du langage (comment exécuter vos codes d'évaluation). Cette description doit se r
+
+WARNING: Les répertoires et fichiers existants devront être complétés et mis à jour sans être renommés. Les binaires de compilation (répertoire `bin` par exemple) ne devront pas être poussés sur le dépôt.
+
+=== Pré-requis
+
+- Java v.x.y.z
+- ...
+
+=== Reproductibilité
+
+- Pour reproduire mon analyse :
+. Installez X
+. Lancez Y
+. ...
+
+=== Références
+
+- link:http://xyz[Mon super outil XYZ]
+- ...
+
+== Généralités, notation de la SAÉ et résultat du concours
+
+=== Généralités
+
+- Vous pouvez vous entraider pour les outils d'analyse et de performance.
+- N'hésitez pas à solliciter vos enseignants des ressources impliquées par cette SAÉ.
+
+=== Notation
+
+- **80%** de la notation portera sur votre rapport de la phase 2 et vos analyses (véracité, pertinence, qualité, ajout de critères pertinents, ...)
+- **20%** de la notation portera sur le classement de votre algorithme de la phase 1 (pertinence de la catégorie choisie, évaluation/classement par les pairs, ...)
+- **Bonus** pour les 10 premiers de chaque catégorie du concours de codage
+- **Bonus** pour ceux qui auront proposés plusieurs algos différents (indépendamment de leur classement final)
+- **Bonus** supplémentaire pour ceux qui auront proposés des versions en langages différents de leur(s) algo(s)  (indépendamment de leur classement final)
+
+=== Divers
+
+- Pour le résultat du concours, les algorithmes de la catégorie "performances" seront récompensés par langage.
