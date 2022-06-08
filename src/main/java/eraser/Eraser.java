@@ -1,27 +1,60 @@
 package main.java.eraser;
 
 public class Eraser {
-    public static String erase(String str, int index) {
-    	// si on a atteint la fin on arrête
-    	if (index == str.length()) {
-    		return str;
-    	} else {
-	        // si c'est un espace
-	        if (str.charAt(index) == 32) {
-	            // on regarde si il y a un espcae avant
-	            if (index != 0 && str.charAt(index-1) == 32) {
-	                System.out.println("Il y au un autre espace avant.");
-	            // on regarde si il y a un espcae après
-	            } else if (index+1 < str.length() && str.charAt(index+1) == 32) {
-	            	System.out.println("Il y au un autre espace après.");
-	            // il n'y a qu'un seul espace donc on s'en débarrasse
-	            } else {
-	            	StringBuilder sb = new StringBuilder(str);
-	            	return erase(sb.deleteCharAt(index).toString(), index+1);
-	            }
-	        }
-	        // rien à modifier on vas ou carractère suivant
-	        return erase(str, index+1);
-    	}
-    }
+	// Marche
+	public static String erase1(String str) {
+		String result = "";
+		for (int i = 0; i < str.length(); i++) {
+			if (str.charAt(i) == 32) {
+				if (i != 0 && str.charAt(i-1) == 32) {
+					result += str.charAt(i);
+				} else if (i+1 < str.length() && str.charAt(i+1) == 32) {
+					result += str.charAt(i);
+				}
+			} else {
+				result += str.charAt(i);
+			}
+		}
+		return result;
+	}
+	
+	// Marche
+	public static String erase2(String str) {
+		String result = "";
+		for (int i = 0; i < str.length(); i++) {
+			if (str.charAt(i) != 32 || (str.charAt(i) == 32 && ((i != 0 && str.charAt(i-1) == 32) || (i+1 < str.length() && str.charAt(i+1) == 32)))) {
+				result += str.charAt(i);
+			}
+		}
+		return result;
+	}
+	
+	// Marche
+	public static String erase3(String str) {
+		int start = str.indexOf(" ");
+		int end = str.lastIndexOf(" ") == -1 ? -2 : str.lastIndexOf(" ");
+		for (int i = start; i <= end; i++) {
+			if (str.charAt(i) == 32) {
+				if (i != 0 && str.charAt(i-1) == 32) {
+				} else if (i+1 < str.length() && str.charAt(i+1) == 32) {
+				} else {
+					StringBuilder sb = new StringBuilder(str);
+					str = sb.deleteCharAt(i).toString();
+					end --;
+				}
+			}
+		}
+		return str;
+	}
+	
+	// Marche
+	public static String erase(String str) {
+		for (int i = 0; i < str.length(); i++) {
+			if (str.charAt(i) == 32 && !((i != 0 && str.charAt(i-1) == 32) || (i+1 < str.length() && str.charAt(i+1) == 32))) {
+				StringBuilder sb = new StringBuilder(str);
+				str = sb.deleteCharAt(i).toString();
+			}
+		}
+		return str;
+	}
 }
