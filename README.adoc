@@ -140,6 +140,7 @@ Vous utiliserez le dépôt initial qui vous aura été attribué via classroom p
 | #    | lien                                        | langage  | catégorie
 | 1    | link:src/main/java/eraser/Simple.java[ici]  | Java     | Simplicité
 | 2    | link:src/main/java/eraser/Efficace.java[ici]| Java     | Efficacité
+| 3    | link:solution.py[ici]| Python     | Simple
 |==========================================================================
 
 === Phase 2 (deadline : **vendredi 16 juin** à minuit)
