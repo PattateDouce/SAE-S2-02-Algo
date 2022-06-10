@@ -138,7 +138,7 @@ Vous utiliserez le dépôt initial qui vous aura été attribué via classroom p
 [options="header"]
 |==========================================================================
 | #    | lien                                        | langage  | catégorie
-| 1    | link:src/main/java/eraser/Simple.java[ici]  | Java     | Simplicité
+| 1    | link:src/main/java/eraser/Eraser.java[ici]  | Java     | Simplicité
 | ...  | ...                                         | ...      | ...      
 |==========================================================================
 
