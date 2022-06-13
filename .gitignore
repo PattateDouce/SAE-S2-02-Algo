@@ -30,3 +30,4 @@ test
 README.pdf
 .DS_Store
 .vscode
+__pycache__/
