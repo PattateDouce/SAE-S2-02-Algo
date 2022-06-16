@@ -9,6 +9,18 @@
 // => niveau de guidage
 //include:definitions.txt (glossaire des termes du BUT comme SAE)
 
+/
+
+/
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+link:rapport/RapportDeComparaisonsSansEspacesPourNePasDerrangerAsciidoc.pdf[Rapport]
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+/
+
+/
+
 // Specific to GitHub
 ifdef::env-github[]
 :toc:
