@@ -41,7 +41,7 @@ public class Test {
         fr2.close();
         
         long endTime = System.currentTimeMillis();
-        System.out.println("Time taken to read files to a varible : " + (endTime - startTime) + " ms");
+        System.out.println("Time taken to read files to varibles : " + (endTime - startTime) + " ms");
         
         
         // Test 15 fois l'algo
@@ -49,7 +49,7 @@ public class Test {
         for (int i = 0; i < res.length; i++) {
             startTime = System.currentTimeMillis();
             
-            String texte = simplicite_56.erase(texteE);
+            String texte = simplicite_84.erase(texteE);
             
             endTime = System.currentTimeMillis();
             

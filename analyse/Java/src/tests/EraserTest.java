@@ -21,6 +21,7 @@ public class EraserTest {
         assertEquals("OK", simplicite_56.erase("OK"));
         assertEquals("Coucou  JM  B", simplicite_56.erase("Cou cou  J M  B"));
         assertEquals("", simplicite_56.erase(""));
-        assertEquals("  f  ", simplicite_56.erase("  f  "));
+        assertEquals("un", simplicite_56.erase(" un "));
+        assertEquals("  deux  ", simplicite_56.erase("  deux  "));
     }
 }
