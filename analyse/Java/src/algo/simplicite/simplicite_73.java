@@ -1,7 +1,5 @@
 package algo.simplicite;
 
-import java.util.ArrayList;
-
 public class simplicite_73 {
 	
 	/*

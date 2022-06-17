@@ -1,10 +1,17 @@
-package test;
+package tests;
 
 import static org.junit.Assert.assertEquals;
 
 import java.io.FileReader;
 import java.io.IOException;
 
+import algo.efficacite.efficacite_143;
+import algo.efficacite.efficacite_3;
+import algo.efficacite.efficacite_90;
+import algo.simplicite.simplicite_35;
+import algo.simplicite.simplicite_56;
+import algo.simplicite.simplicite_73;
+import algo.simplicite.simplicite_84;
 import algo.sobriete.sobriete_150;
 
 public class Test {
@@ -15,7 +22,7 @@ public class Test {
         // Lie le fichier à Erase et le fichier qu'on doit obtenir après l'algo
         long startTime = System.currentTimeMillis();
         
-        FileReader fr = new FileReader("C:\\Users\\Etudiant\\Documents\\GitHub\\sae2-02-PattateDouce\\src\\texteE.txt");
+        FileReader fr = new FileReader("C:\\Users\\Etudiant\\Documents\\GitHub\\sae2-02-PattateDouce\\analyse\\texte 100k not erased.txt");
         
         String texteE = "";
         for (int i = fr.read(); i != -1; i = fr.read()) {
@@ -24,7 +31,7 @@ public class Test {
         
         fr.close();
         
-        FileReader fr2 = new FileReader("C:\\Users\\Etudiant\\Documents\\GitHub\\sae2-02-PattateDouce\\src\\texteS.txt");
+        FileReader fr2 = new FileReader("C:\\Users\\Etudiant\\Documents\\GitHub\\sae2-02-PattateDouce\\analyse\\texte 100k erased.txt");
         
         String texteS = "";
         for (int i = fr2.read(); i != -1; i = fr2.read()) {
@@ -34,15 +41,15 @@ public class Test {
         fr2.close();
         
         long endTime = System.currentTimeMillis();
-        System.out.println("Time taken to read file to a varible : " + (endTime - startTime) + " ms");
+        System.out.println("Time taken to read files to a varible : " + (endTime - startTime) + " ms");
         
         
         // Test 15 fois l'algo
-        long[] res = new long[100];
+        long[] res = new long[15];
         for (int i = 0; i < res.length; i++) {
             startTime = System.currentTimeMillis();
             
-            String texte = sobriete_150.erase(texteE);
+            String texte = simplicite_56.erase(texteE);
             
             endTime = System.currentTimeMillis();
             
@@ -57,6 +64,6 @@ public class Test {
         for (int i = 0; i < res.length; i++) {
             sum += res[i];
         }
-        System.out.println(sum / res.length);
+        System.out.println(sum / res.length + " ms");
     }
 }
