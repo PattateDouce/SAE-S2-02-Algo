@@ -16,12 +16,13 @@ import static org.junit.Assert.assertEquals;
 public class EraserTest {
     @Test
     public void testSolutionSimple() {
-        assertEquals("666,thenumberofthebeast", simplicite_56.erase("666, the number of the beast"));
-        assertEquals("06   07651970", simplicite_56.erase("06   07 65 19 70 "));
-        assertEquals("OK", simplicite_56.erase("OK"));
-        assertEquals("Coucou  JM  B", simplicite_56.erase("Cou cou  J M  B"));
-        assertEquals("", simplicite_56.erase(""));
-        assertEquals("un", simplicite_56.erase(" un "));
-        assertEquals("  deux  ", simplicite_56.erase("  deux  "));
+        assertEquals("666,thenumberofthebeast", sobriete_150.erase("666, the number of the beast"));
+        assertEquals("06   07651970", sobriete_150.erase("06   07 65 19 70 "));
+        assertEquals("OK", sobriete_150.erase("OK"));
+        assertEquals("Coucou  JM  B", sobriete_150.erase("Cou cou  J M  B"));
+        assertEquals("", sobriete_150.erase(""));
+        assertEquals("un", sobriete_150.erase(" un "));
+        assertEquals("  deux  ", sobriete_150.erase("  deux  "));
+        assertEquals(".", sobriete_150.erase(" . "));
     }
 }

@@ -11,7 +11,7 @@ def analyse(fonction):
 	with open('../texte 100k erased.txt') as f:
 		output = f.read()
 
-	for test in range(100):
+	for test in range(15):
 		start = time.time()
 
 		erased = fonction(input)
@@ -30,5 +30,5 @@ def analyse(fonction):
 print('Analyse de sobriete_102')
 analyse(sob.erase)
 
-print('\nAnalyse de sobriete_102')
+print('\nAnalyse de efficacite_13')
 analyse(eff.erase)
