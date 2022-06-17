@@ -49,7 +49,7 @@ public class Test {
         for (int i = 0; i < res.length; i++) {
             startTime = System.currentTimeMillis();
             
-            String texte = simplicite_84.erase(texteE);
+            String texte = efficacite_90.erase(texteE);
             
             endTime = System.currentTimeMillis();
             
