@@ -157,29 +157,36 @@ Vous utiliserez le dépôt initial qui vous aura été attribué via classroom p
 
 === Phase 2 (deadline : **vendredi 16 juin** à minuit)
 
-* [ ] Le rapport d'évaluation des algorithmes (e.g., jupyter, asciidoc ou PDF). Pour chaque catégorie, vous devrez désigner qui est 1er, 2ème, 3ème, ... (avec possibilité d’ex-aequo si le hasard vous a attribué des algos similaires). Il doit se trouver dans le répertoire `rapport` de votre dépôt.
-* [ ] Les codes de test, d'évaluation ou de mesure. Ils doivent se trouver dans le répertoire `analyse` de votre dépôt.
-* [ ] Les références des librairies/outils utilisés (pour ceux non fournis). Elles doivent être listées dans la sous-section (Références) ci-dessous.
+* [x] Le rapport d'évaluation des algorithmes (e.g., jupyter, asciidoc ou PDF). Pour chaque catégorie, vous devrez désigner qui est 1er, 2ème, 3ème, ... (avec possibilité d’ex-aequo si le hasard vous a attribué des algos similaires). Il doit se trouver dans le répertoire `rapport` de votre dépôt.
+* [x] Les codes de test, d'évaluation ou de mesure. Ils doivent se trouver dans le répertoire `analyse` de votre dépôt.
+* [x] Les références des librairies/outils utilisés (pour ceux non fournis). Elles doivent être listées dans la sous-section (Références) ci-dessous.
 * [ ] La chaîne de compilation et exécutable, ou paquetage selon les standards du langage (comment exécuter vos codes d'évaluation). Cette description doit se r
 
 WARNING: Les répertoires et fichiers existants devront être complétés et mis à jour sans être renommés. Les binaires de compilation (répertoire `bin` par exemple) ne devront pas être poussés sur le dépôt.
 
 === Pré-requis
 
-- Java v.x.y.z
-- ...
+- Java 1.8
+- Python 3.7
+- Compte Replit
 
 === Reproductibilité
 
 - Pour reproduire mon analyse :
-. Installez X
-. Lancez Y
-. ...
+. Installez Java 1.8
+. Lancez analyse\Java\src\tests\Test.java et analyse\Java\src\tests\EraserTest.java
+. Installez Python 3.7
+. Lancez analyse\Python\analyse.py et analyse\Python\test.py
+. Créez un Replit
+. Téléverser analyse\C\analyse.c, analyse\C\main.c, analyse\C\test.c, analyse\C\sobriete_136.c
+. Cliquez sur "Run"
 
 === Références
 
-- link:http://xyz[Mon super outil XYZ]
-- ...
+- link:https://junit.org/junit4/[JUnit 4 pour Java]
+- link:https://www.java.com/fr/download/[Java 1.8]
+- link:https://www.python.org/downloads/release/python-379/[Python 3.7]
+- link:https://replit.com[Replit]
 
 == Généralités, notation de la SAÉ et résultat du concours
 
